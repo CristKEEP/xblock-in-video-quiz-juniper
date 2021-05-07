@@ -7,9 +7,9 @@ var InVideoQuizXBlock = InVideoQuizXBlock || {{}};
 
     var videoId = '{video_id}';
     try {{
-        JSON.parse(`{timemap}`);        
+        
         if (videoId) {{
-            InVideoQuizXBlock.config[videoId] = {timemap};
+            InVideoQuizXBlock.config[videoId] = JSON.parse(`{timemap}`);
         }}
     }}
     catch {{
