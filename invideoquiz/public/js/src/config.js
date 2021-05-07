@@ -6,7 +6,13 @@ var InVideoQuizXBlock = InVideoQuizXBlock || {{}};
     InVideoQuizXBlock.config = InVideoQuizXBlock.config || {{}};
 
     var videoId = '{video_id}';
-    if (videoId) {{
-        InVideoQuizXBlock.config[videoId] = {timemap};
+    try {{
+        JSON.parse(`{timemap}`);        
+        if (videoId) {{
+            InVideoQuizXBlock.config[videoId] = {timemap};
+        }}
+    }}
+    catch {{
+        
     }}
 }}());
