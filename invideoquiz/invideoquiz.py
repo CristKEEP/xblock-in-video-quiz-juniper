@@ -103,7 +103,7 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
             user permission mode
         """
         try:
-            if self.xmodule_runtime.user_is_staff:
+            if self.runtime.service(self, 'user').get_current_user().opt_attrs.get('edx-platform.user_is_staff'):
                 return 'staff'
         except AttributeError:
             pass
